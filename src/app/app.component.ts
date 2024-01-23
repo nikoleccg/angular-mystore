@@ -16,6 +16,7 @@ import { Product } from './models/product.model';
 
 export class AppComponent {
   imgParent =  'https://media.es.wired.com/photos/6501e7429fa9000811a95fe8/16:9/w_2240,c_limit/Adobe%20Firefly.jpeg';
+  toggleImageState = true;
 
   products:Product[] = [{
     id: 'a1',
@@ -33,7 +34,12 @@ export class AppComponent {
     img: './../../../assets/images/img3.jpg',
     price: 20
   }]
+
   onLoaded(img: string) {
     console.log("Cargando Padre")
+  }
+
+  toggleImage() {
+    this.toggleImageState = !this.toggleImageState;
   }
 }
