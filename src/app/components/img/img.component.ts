@@ -12,8 +12,8 @@ import { renderApplication } from '@angular/platform-server';
 export class ImgComponent {
   @Input() img : string = 'Valor inicial';
   @Output() loaded = new EventEmitter<string>();
-  counter: number = 0;
-  counterFn : number = 0;
+  // counter: number = 0;
+  // counterFn : number = 0;
 
   constructor(){
     // before render
@@ -29,12 +29,12 @@ export class ImgComponent {
   ngOnInit(): void{
     // before render
     // async fetch -- once time
-    if (typeof window !== 'undefined') {
-      this.counterFn = window.setInterval(() => {
-        this.counter += 1;
-        console.log("run counter");
-      }, 1000);
-    }
+    // if (typeof window !== 'undefined') {
+    //   this.counterFn = window.setInterval(() => {
+    //     this.counter += 1;
+    //     console.log("run counter");
+    //   }, 1000);
+    // }
     console.log('ngOnInit', 'imgValue=>', this.img);
   }
   ngAfterViewInit(){
@@ -45,10 +45,10 @@ export class ImgComponent {
   ngOnDestroy(){
     // delete -- once time
     console.log('ngOnDestroy');
-    if (typeof window !== 'undefined') {
-      // Check if window is defined before using it
-      window.clearInterval(this.counterFn);
-    }
+    // if (typeof window !== 'undefined') {
+    //   // Check if window is defined before using it
+    //   window.clearInterval(this.counterFn);
+    // }
   }
 
   imgDefault='./../../../assets/images/default.jpg';
