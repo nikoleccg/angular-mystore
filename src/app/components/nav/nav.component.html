@@ -1,0 +1,45 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toggleMenu()">
+      <img src="../../../assets/images/ICONO_MENU.jpg" alt="menu">
+    </button>
+    <a href="">
+      <img src="../../../../assets/images/LOGO.jpg" alt="logo">
+    </a>
+    <a href="">
+      <img src="./../../../assets/images/ICON_SHOPPING_CART.jpg" alt="shopping">
+    </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toggleMenu()">Close</button>
+    <ul>
+      <li><a href="">All</a></li>
+      <li><a href="">Clothes</a></li>
+      <li><a href="">Electronics</a></li>
+    </ul>
+  </div>
+</div>
+<div class="hide-mobile">
+  <div>
+    <nav>
+      <a class="logo" href="">
+        <img src="../../../assets/images/LOGO.jpg" />
+      </a>
+      <ul>
+        <li><a href="">All</a></li>
+        <li><a href="">Clothes</a></li>
+        <li><a href="">Electronics</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="info">
+      <div class="account">nikole.caballerotest.com</div>
+      <div>
+        <a href="">
+          <img src="../../../assets/images/ICON_SHOPPING_CART.jpg" />
+        </a>
+      </div>
+    </div>
+
+</div>

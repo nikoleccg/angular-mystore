@@ -4,13 +4,14 @@ import { ImgComponent } from './components/img/img.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProductsComponent } from "./components/products/products.component";
+import { NavComponent } from "./components/nav/nav.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [RouterOutlet, ImgComponent, FormsModule, CommonModule, ProductsComponent]
+    imports: [RouterOutlet, ImgComponent, FormsModule, CommonModule, ProductsComponent, NavComponent]
 })
 
 export class AppComponent {
