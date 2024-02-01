@@ -1,4 +1,9 @@
-<p>Nombre Producto: {{ product.title }}</p>
-<app-img [img]="product.image"></app-img>
-<h2>Precio: {{ product.price }} Bs.</h2>
+<p>Nombre Producto: {{ product.title }}</p><br>
+<p>Nombre lowercase: {{ product.title|lowercase }}</p><br>
+<p>Nombre Producto - Reverse: {{ product.title|reverse }}</p><br>
+<app-img [img]="product.image"></app-img><br>
+<h2>Precio: {{ product.price|currency:'Bs.' }}</h2><br>
+<p>{{ now|date: 'fullDate' }}</p><br>
+<p>{{ pastDate|timeAgo }}</p><br>
+<p appHighlight>{{ product.description }}</p><br>
 <button (click)="onAddToCart()">Add cart</button>
