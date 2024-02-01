@@ -11,10 +11,10 @@ import { ImgComponent } from "../img/img.component";
 })
 export class ProductComponent {
   @Input() product : Product = {
-    id: "",
-    name: "",
+    id: 0,
+    title: "",
     price: 0,
-    img: ""
+    image: ""
   }
   @Output() addedProduct = new EventEmitter<Product>();
   onAddToCart(){

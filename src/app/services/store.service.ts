@@ -5,11 +5,15 @@ import { Product } from '../models/product.model';
   providedIn: 'root'
 })
 export class StoreService {
-  myShoppingCart: Product[] = [];
+  private myShoppingCart: Product[] = [];
   constructor() { }
 
   addProduct(product: Product){
     this.myShoppingCart.push(product)
+  }
+
+  getShoppingCart(){
+    return this.myShoppingCart;
   }
 
   getTotal(){
